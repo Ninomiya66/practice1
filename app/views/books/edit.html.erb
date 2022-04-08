@@ -21,10 +21,20 @@
 <%= form_with model: @book do |f| %>
 
  <%= f.label :TItle %>
+ 
+ <div class="field">
+     
  <%= f.text_field :title %>
+ 
+ </div>
 
  <%= f.label :Body %>
+ 
+ <div class="field">
+     
  <%= f.text_area :body %>
+ 
+ </div>
 
  <%= f.submit 'Update Book' %>
 
