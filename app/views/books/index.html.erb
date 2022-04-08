@@ -46,6 +46,8 @@
 
 <ul>
     
+    <%= @book.errors.count %>errors prohibited this book from being saved:
+    
     <% @book.errors.full_messages.each do |message| %>
     
     <li><%= message %></li>
