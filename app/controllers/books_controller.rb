@@ -7,15 +7,15 @@ class BooksController < ApplicationController
     
     @books = Book.all
     
-    @book = Book.new(book_params)
+    @book = Book.new
     
   end
   
   def create
     
-    @book = Book.new(book_params)
+    book = Book.new(book_params)
     
-    @book.save
+    book.save
     
   end
 
@@ -32,5 +32,4 @@ class BooksController < ApplicationController
     params.require(:book).permit(:title, :body)
     
   end
-  
 end
